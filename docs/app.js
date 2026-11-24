@@ -4,6 +4,7 @@
   const topic = document.getElementById('topic');
   const cards = Array.from(document.querySelectorAll('.paper'));
   const topicNames = {
+    'mathematical-physics': 'Mathematical physics',
     'number-theory': 'Number theory',
     partitions: 'Partitions & combinatorics',
     'special-functions': 'Special functions',
@@ -41,7 +42,7 @@
       try {
         if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
         await navigator.clipboard.writeText(code.textContent);
-        status.textContent = `BibTeX citation copied for arXiv ${button.dataset.id}.`;
+        status.textContent = `BibTeX citation copied for ${card.querySelector('h3').textContent.trim()}.`;
         const previous = button.innerHTML;
         button.textContent = 'Copied';
         window.setTimeout(() => { button.innerHTML = previous; }, 1800);

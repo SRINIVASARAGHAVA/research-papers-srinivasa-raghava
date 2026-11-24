@@ -1,0 +1,18 @@
+{
+  "manuscripts": [
+    {
+      "id": "string-amplitude-residues",
+      "title": "String Amplitude Residues Along Kinematic Curves",
+      "authors": ["K. Srinivasa Raghava"],
+      "status": "Author manuscript",
+      "pages": 28,
+      "added_on": "2026-11-24",
+      "summary": "Studies residues of four-point open and closed string amplitudes along varying momentum-transfer curves, including recovery of transfer data and bounds on massive-level remainders. It also develops rational bounds for pi using interpolation and differentiated Gauss sums, with asymptotic remainder estimates.",
+      "topics": ["Mathematical physics", "Special functions"],
+      "pdf_filename": "string-amplitude-residues-along-kinematic-curves.pdf",
+      "pdf_bytes": 687873,
+      "pdf_sha256": "a9841c44aff1ced97312a133a0eb7df7d60d73d8a2f8f80f8a2410f5cfb139fc",
+      "citation_key": "raghavaStringAmplitudeResidues"
+    }
+  ]
+}
