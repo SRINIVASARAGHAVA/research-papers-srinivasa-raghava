@@ -2,6 +2,10 @@
 
 ## K. Srinivasa Raghava
 
+<img src="docs/k-srinivasa-raghava.png" alt="Portrait of K. Srinivasa Raghava" width="280">
+
+My research moves between pure and applied mathematics, guided by a recurring question: what deeper structure explains the pattern in front of us? Alongside published papers and preprints, I enjoy writing clear mathematical notes and sharing new findings in ways that invite students and researchers into the conversation.
+
 A public collection of mathematics preprints covering number theory, partitions, special functions, modular forms, and algebraic geometry.
 
 **9 public arXiv preprints** · Metadata checked **24 Nov 2026**
