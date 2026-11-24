@@ -6,6 +6,8 @@
 
 My research moves between pure and applied mathematics, guided by a recurring question: what deeper structure explains the pattern in front of us? Alongside published papers and preprints, I enjoy writing clear mathematical notes and sharing new findings in ways that invite students and researchers into the conversation.
 
+[Facebook](https://www.facebook.com/SRINIVASARAGHAVA6174) · [X (Twitter)](https://x.com/SrinivasR1729)
+
 A public collection of mathematics preprints covering number theory, partitions, special functions, modular forms, and algebraic geometry.
 
 **9 public arXiv preprints** · Metadata checked **24 Nov 2026**
@@ -13,6 +15,18 @@ A public collection of mathematics preprints covering number theory, partitions,
 [Research website](https://srinivasaraghava.github.io/research-papers-srinivasa-raghava/) · [Browse all citations](citations.bib) · [arXiv author search](https://arxiv.org/search/?query=Raghava%2C+K+S&searchtype=author)
 
 PDF links below open the exact versions listed. Each arXiv record provides the full abstract, submission history, and access to later revisions. Papers are described as preprints; no journal publication status is implied.
+
+## Special feature
+
+### [Srinivasa Raghava: Patterns, Primes, and the Ramanujan Influence](https://ictp.global/news/13119204)
+
+**ICTP Global Science Portal · 24 March 2026**
+
+A conversation about Ramanujan's influence, mathematical intuition, experimentation, and the ideas behind my research.
+
+Interview by Abdulhafeez Abdulsalam for InvariantMath, shared on the ICTP Global Science Portal.
+
+[Read the interview](https://ictp.global/news/13119204)
 
 ## Paper index
 
