@@ -9,6 +9,7 @@ DATA = json.loads((ROOT / "docs/papers.json").read_text(encoding="utf-8"))
 PAPERS = DATA["papers"]
 REPO = "https://github.com/SRINIVASARAGHAVA/research-papers-srinivasa-raghava"
 NAME = "K. Srinivasa Raghava"
+BIO = "My research moves between pure and applied mathematics, guided by a recurring question: what deeper structure explains the pattern in front of us? Alongside published papers and preprints, I enjoy writing clear mathematical notes and sharing new findings in ways that invite students and researchers into the conversation."
 
 def date(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00")).strftime("%d %b %Y").lstrip("0")
@@ -75,8 +76,8 @@ write("docs/index.html", f'''<!doctype html>
   <header class="site-header"><a class="wordmark" href="./" aria-label="Research collection home">KSR<span>Mathematics</span></a><nav aria-label="Main navigation"><a href="#papers">Papers</a><a href="#about">About</a><a href="{REPO}">GitHub <span aria-hidden="true">↗</span></a></nav></header>
   <main>
     <section class="hero" aria-labelledby="page-title">
-      <div class="hero-copy"><p class="eyebrow">A mathematics research collection</p><h1 id="page-title">{NAME}</h1><p class="hero-subtitle">Research papers</p><p class="intro">Exploring arithmetic, infinite series, and the structures that connect them.</p><div class="hero-links"><a class="button" href="#papers">Browse the collection <span aria-hidden="true">↓</span></a><a href="citations.bib" download>Download all citations</a></div></div>
-      <div class="hero-note"><span class="collection-number">{len(PAPERS):02}</span><p>Public preprints</p><div class="note-rule"></div><p class="note-small">Number theory<br>Special functions<br>Algebraic geometry</p><span class="note-caption">Collection checked<br>{date(DATA['verified_on'])}</span></div>
+      <div class="hero-copy"><p class="eyebrow">A mathematics research collection</p><h1 id="page-title">{NAME}</h1><p class="hero-subtitle">Research papers</p><p class="intro">{escape(BIO)}</p><div class="hero-links"><a class="button" href="#papers">Browse the collection <span aria-hidden="true">↓</span></a><a href="citations.bib" download>Download all citations</a></div></div>
+      <figure class="hero-portrait"><img src="k-srinivasa-raghava.png" alt="Portrait of {NAME}" width="1122" height="1402" fetchpriority="high"><figcaption><span>{NAME}</span><span>{len(PAPERS)} public preprints</span></figcaption></figure>
     </section>
     <section class="collection" id="papers" aria-labelledby="collection-title">
       <div class="section-heading"><div><p class="eyebrow">The collection</p><h2 id="collection-title">Papers &amp; preprints</h2></div><p>Version-specific PDFs.<br>Original records on arXiv.</p></div>
@@ -105,6 +106,10 @@ mirror_note = (f"This collection includes {mirror_count} versioned PDF copies in
 write("README.md", f'''# Research papers
 
 ## {NAME}
+
+<img src="docs/k-srinivasa-raghava.png" alt="Portrait of {NAME}" width="280">
+
+{BIO}
 
 A public collection of mathematics preprints covering number theory, partitions, special functions, modular forms, and algebraic geometry.
 
