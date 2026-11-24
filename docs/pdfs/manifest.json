@@ -1,0 +1,92 @@
+[
+  {
+    "arxiv_id": "2611.23315",
+    "version": "2611.23315v1",
+    "title": "Taylor coefficients and duality for finite multiple T-values",
+    "source_url": "https://arxiv.org/pdf/2611.23315v1",
+    "file": "pdfs/2611.23315v1.pdf",
+    "size_bytes": 427480,
+    "sha256": "cb6b9e691dbd6ead269d79fc562ee85b18bc3e32fbb9686083c9ed9ebf34e247",
+    "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+  },
+  {
+    "arxiv_id": "2610.10578",
+    "version": "2610.10578v4",
+    "title": "Coefficient arithmetic and Mellin moments of the Rogers-Ramanujan continued fraction",
+    "source_url": "https://arxiv.org/pdf/2610.10578v4",
+    "file": "pdfs/2610.10578v4.pdf",
+    "size_bytes": 472942,
+    "sha256": "fe54ce008ab244a1d136014170391b10662fcd54a6ff18cc2299bd9eda9a0bf8",
+    "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+  },
+  {
+    "arxiv_id": "2609.22346",
+    "version": "2609.22346v2",
+    "title": "Dedekind Eta Powers and Interlacing in Lambert Series Quotients",
+    "source_url": "https://arxiv.org/pdf/2609.22346v2",
+    "file": "pdfs/2609.22346v2.pdf",
+    "size_bytes": 520460,
+    "sha256": "801e6e571ba41d15e398f437fb618179d6c5ad41f8584368c10cb1fb3fe78453",
+    "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+  },
+  {
+    "arxiv_id": "2609.20201",
+    "version": "2609.20201v2",
+    "title": "Exact Moments and CM Periods of Reciprocal Quadratic Mellin Integrals",
+    "source_url": "https://arxiv.org/pdf/2609.20201v2",
+    "file": "pdfs/2609.20201v2.pdf",
+    "size_bytes": 480890,
+    "sha256": "9663482592ff8fe50a9567a071883746396e539575326eec9b996d32c6bdd527",
+    "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+  },
+  {
+    "arxiv_id": "2609.18956",
+    "version": "2609.18956v2",
+    "title": "Radial Limits and Euler Exponents of a False Theta Series with Character Modulo 8",
+    "source_url": "https://arxiv.org/pdf/2609.18956v2",
+    "file": "pdfs/2609.18956v2.pdf",
+    "size_bytes": 447919,
+    "sha256": "23206a40f421a2ec68d707d5e0b3a09fe1d968219bd68ad47b5eb0ade72076c8",
+    "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+  },
+  {
+    "arxiv_id": "2609.18945",
+    "version": "2609.18945v1",
+    "title": "Arithmetic Constraints and Limit Laws for Diagonal Rational Partitions",
+    "source_url": "https://arxiv.org/pdf/2609.18945v1",
+    "file": "pdfs/2609.18945v1.pdf",
+    "size_bytes": 577145,
+    "sha256": "b85e3155b379b48295000032025daaa58bed428cd40ce8027f324e4ec7ddd51a",
+    "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+  },
+  {
+    "arxiv_id": "2607.11926",
+    "version": "2607.11926v2",
+    "title": "Walsh eta-units at squarefree level-integral structure and Fricke values",
+    "source_url": "https://arxiv.org/pdf/2607.11926v2",
+    "file": "pdfs/2607.11926v2.pdf",
+    "size_bytes": 583654,
+    "sha256": "ac31892f9b98173a3258914662f6cdfb845162c906cf19e40b8f80ba35b9d61e",
+    "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+  },
+  {
+    "arxiv_id": "2607.11925",
+    "version": "2607.11925v4",
+    "title": "A Ramanujan Pell K3 Surface and Cube Representations",
+    "source_url": "https://arxiv.org/pdf/2607.11925v4",
+    "file": "pdfs/2607.11925v4.pdf",
+    "size_bytes": 517615,
+    "sha256": "5429bc1e8453b0a6003f3c66c9ff7db255f614f5ba049f941b342955e5282a37",
+    "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+  },
+  {
+    "arxiv_id": "2607.09904",
+    "version": "2607.09904v3",
+    "title": "Harmonic weights in inverse central binomial series",
+    "source_url": "https://arxiv.org/pdf/2607.09904v3",
+    "file": "pdfs/2607.09904v3.pdf",
+    "size_bytes": 665701,
+    "sha256": "6be35216f9553e2a7e97ee1c5631d986815ff385d49eb361ca71cf15a4614e8b",
+    "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+  }
+]
