@@ -1,0 +1,272 @@
+{
+  "verified_on": "2026-11-24",
+  "author": "K. Srinivasa Raghava",
+  "author_search_url": "https://arxiv.org/search/?query=Raghava%2C+K+S&searchtype=author",
+  "count": 9,
+  "papers": [
+    {
+      "arxiv_id": "2611.23315",
+      "title": "Taylor coefficients and duality for finite multiple T-values",
+      "version": 1,
+      "submitted_at": "2026-11-14T13:51:18Z",
+      "latest_version_at": "2026-11-14T13:51:18Z",
+      "categories": [
+        "math.GM"
+      ],
+      "pages": 11,
+      "summary": "Uses coefficients of iterated integrals to represent finite multiple T-values. It develops Bernoulli convolution formulas and duality identities, including a specified family from Cheng and Zhao's conjecture.",
+      "authors": [
+        "K. Srinivasa Raghava"
+      ],
+      "status": "arXiv preprint",
+      "latest_version_id": "2611.23315v1",
+      "abstract_url": "https://arxiv.org/abs/2611.23315",
+      "version_url": "https://arxiv.org/abs/2611.23315v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.23315",
+      "version_pdf_url": "https://arxiv.org/pdf/2611.23315v1",
+      "doi_url": "https://doi.org/10.48550/arXiv.2611.23315",
+      "doi_registration_status": "pending registration as stated on arXiv",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_name": "arXiv.org non-exclusive license to distribute",
+      "topics": [
+        "Number theory"
+      ]
+    },
+    {
+      "arxiv_id": "2610.10578",
+      "title": "Coefficient arithmetic and Mellin moments of the Rogers-Ramanujan continued fraction",
+      "version": 4,
+      "submitted_at": "2026-10-05T19:27:59Z",
+      "latest_version_at": "2026-11-13T02:47:21Z",
+      "categories": [
+        "math.NT"
+      ],
+      "pages": 21,
+      "summary": "Investigates signs and arithmetic properties of logarithmic coefficients of the Rogers-Ramanujan continued fraction. It relates these coefficients to Mellin moment generating functions and integrals involving zeta and L-functions.",
+      "authors": [
+        "K. Srinivasa Raghava"
+      ],
+      "status": "arXiv preprint",
+      "latest_version_id": "2610.10578v4",
+      "abstract_url": "https://arxiv.org/abs/2610.10578",
+      "version_url": "https://arxiv.org/abs/2610.10578v4",
+      "pdf_url": "https://arxiv.org/pdf/2610.10578",
+      "version_pdf_url": "https://arxiv.org/pdf/2610.10578v4",
+      "doi_url": "https://doi.org/10.48550/arXiv.2610.10578",
+      "doi_registration_status": "arXiv-issued DOI",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_name": "arXiv.org non-exclusive license to distribute",
+      "topics": [
+        "Number theory",
+        "Special functions",
+        "Modular forms & q-series"
+      ]
+    },
+    {
+      "arxiv_id": "2609.22346",
+      "title": "Dedekind Eta Powers and Interlacing in Lambert Series Quotients",
+      "version": 2,
+      "submitted_at": "2026-09-17T05:31:07Z",
+      "latest_version_at": "2026-11-20T07:22:27Z",
+      "categories": [
+        "math.GM"
+      ],
+      "pages": 25,
+      "summary": "Studies zero and pole interlacing in Lambert series quotients formed from Euler's product. It connects the cubic case with total positivity and analyzes interpolation and boundary limits for general integer powers.",
+      "authors": [
+        "K. Srinivasa Raghava"
+      ],
+      "status": "arXiv preprint",
+      "latest_version_id": "2609.22346v2",
+      "abstract_url": "https://arxiv.org/abs/2609.22346",
+      "version_url": "https://arxiv.org/abs/2609.22346v2",
+      "pdf_url": "https://arxiv.org/pdf/2609.22346",
+      "version_pdf_url": "https://arxiv.org/pdf/2609.22346v2",
+      "doi_url": "https://doi.org/10.48550/arXiv.2609.22346",
+      "doi_registration_status": "arXiv-issued DOI",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_name": "arXiv.org non-exclusive license to distribute",
+      "topics": [
+        "Special functions",
+        "Modular forms & q-series"
+      ]
+    },
+    {
+      "arxiv_id": "2609.20201",
+      "title": "Exact Moments and CM Periods of Reciprocal Quadratic Mellin Integrals",
+      "version": 2,
+      "submitted_at": "2026-07-25T06:46:30Z",
+      "latest_version_at": "2026-10-14T13:01:07Z",
+      "categories": [
+        "math.NT"
+      ],
+      "pages": 26,
+      "summary": "Develops exact evaluations and recurrences for moments of reciprocal quadratic Mellin integrals. It also studies algebraic sampling functions and connections with elliptic curves, complex multiplication, and gamma-valued periods.",
+      "authors": [
+        "K. Srinivasa Raghava"
+      ],
+      "status": "arXiv preprint",
+      "latest_version_id": "2609.20201v2",
+      "abstract_url": "https://arxiv.org/abs/2609.20201",
+      "version_url": "https://arxiv.org/abs/2609.20201v2",
+      "pdf_url": "https://arxiv.org/pdf/2609.20201",
+      "version_pdf_url": "https://arxiv.org/pdf/2609.20201v2",
+      "doi_url": "https://doi.org/10.48550/arXiv.2609.20201",
+      "doi_registration_status": "arXiv-issued DOI",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_name": "arXiv.org non-exclusive license to distribute",
+      "topics": [
+        "Special functions",
+        "Algebraic geometry"
+      ]
+    },
+    {
+      "arxiv_id": "2609.18956",
+      "title": "Radial Limits and Euler Exponents of a False Theta Series with Character Modulo 8",
+      "version": 2,
+      "submitted_at": "2026-07-15T12:12:41Z",
+      "latest_version_at": "2026-11-22T04:08:31Z",
+      "categories": [
+        "math.NT"
+      ],
+      "pages": 22,
+      "summary": "Examines a false theta series and its moment quotients through Dawson-integral transformations and radial limits at roots of unity. It also gives partition interpretations, Euler product exponent formulas, and information about zeros.",
+      "authors": [
+        "K. Srinivasa Raghava"
+      ],
+      "status": "arXiv preprint",
+      "latest_version_id": "2609.18956v2",
+      "abstract_url": "https://arxiv.org/abs/2609.18956",
+      "version_url": "https://arxiv.org/abs/2609.18956v2",
+      "pdf_url": "https://arxiv.org/pdf/2609.18956",
+      "version_pdf_url": "https://arxiv.org/pdf/2609.18956v2",
+      "doi_url": "https://doi.org/10.48550/arXiv.2609.18956",
+      "doi_registration_status": "arXiv-issued DOI",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_name": "arXiv.org non-exclusive license to distribute",
+      "topics": [
+        "Number theory",
+        "Partitions & combinatorics",
+        "Modular forms & q-series"
+      ]
+    },
+    {
+      "arxiv_id": "2609.18945",
+      "title": "Arithmetic Constraints and Limit Laws for Diagonal Rational Partitions",
+      "version": 1,
+      "submitted_at": "2026-09-10T10:14:40Z",
+      "latest_version_at": "2026-09-10T10:14:40Z",
+      "categories": [
+        "math.NT",
+        "math.CO"
+      ],
+      "pages": 25,
+      "summary": "Studies partitions into reduced positive fractions with bounded numerators and denominators. It develops growth asymptotics, arithmetic restrictions on prime-denominator contributions, and distributional results for residues and sampling.",
+      "authors": [
+        "K. Srinivasa Raghava"
+      ],
+      "status": "arXiv preprint",
+      "latest_version_id": "2609.18945v1",
+      "abstract_url": "https://arxiv.org/abs/2609.18945",
+      "version_url": "https://arxiv.org/abs/2609.18945v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.18945",
+      "version_pdf_url": "https://arxiv.org/pdf/2609.18945v1",
+      "doi_url": "https://doi.org/10.48550/arXiv.2609.18945",
+      "doi_registration_status": "arXiv-issued DOI",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_name": "arXiv.org non-exclusive license to distribute",
+      "topics": [
+        "Number theory",
+        "Partitions & combinatorics"
+      ]
+    },
+    {
+      "arxiv_id": "2607.11926",
+      "title": "Walsh eta-units at squarefree level-integral structure and Fricke values",
+      "version": 2,
+      "submitted_at": "2026-07-10T05:23:50Z",
+      "latest_version_at": "2026-10-12T12:59:02Z",
+      "categories": [
+        "math.GM"
+      ],
+      "pages": 22,
+      "summary": "Studies integral structures associated with modular units at squarefree levels and evaluates normalized units at Fricke points. Applications concern quadratic units, equations for inverse pi, and colored partition identities.",
+      "authors": [
+        "K. Srinivasa Raghava"
+      ],
+      "status": "arXiv preprint",
+      "latest_version_id": "2607.11926v2",
+      "abstract_url": "https://arxiv.org/abs/2607.11926",
+      "version_url": "https://arxiv.org/abs/2607.11926v2",
+      "pdf_url": "https://arxiv.org/pdf/2607.11926",
+      "version_pdf_url": "https://arxiv.org/pdf/2607.11926v2",
+      "doi_url": "https://doi.org/10.48550/arXiv.2607.11926",
+      "doi_registration_status": "arXiv-issued DOI",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_name": "arXiv.org non-exclusive license to distribute",
+      "topics": [
+        "Number theory",
+        "Modular forms & q-series"
+      ]
+    },
+    {
+      "arxiv_id": "2607.11925",
+      "title": "A Ramanujan Pell K3 Surface and Cube Representations",
+      "version": 4,
+      "submitted_at": "2026-07-09T19:53:47Z",
+      "latest_version_at": "2026-11-14T02:24:54Z",
+      "categories": [
+        "math.GM"
+      ],
+      "pages": 24,
+      "summary": "Classifies polynomial representations of a specified Ramanujan-Pell sextic as a sum of two cubes. It relates these representations to sections of an elliptic K3 surface and studies heights and denominator divisibility.",
+      "authors": [
+        "K. Srinivasa Raghava"
+      ],
+      "status": "arXiv preprint",
+      "latest_version_id": "2607.11925v4",
+      "abstract_url": "https://arxiv.org/abs/2607.11925",
+      "version_url": "https://arxiv.org/abs/2607.11925v4",
+      "pdf_url": "https://arxiv.org/pdf/2607.11925",
+      "version_pdf_url": "https://arxiv.org/pdf/2607.11925v4",
+      "doi_url": "https://doi.org/10.48550/arXiv.2607.11925",
+      "doi_registration_status": "arXiv-issued DOI",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_name": "arXiv.org non-exclusive license to distribute",
+      "topics": [
+        "Number theory",
+        "Algebraic geometry"
+      ]
+    },
+    {
+      "arxiv_id": "2607.09904",
+      "title": "Harmonic weights in inverse central binomial series",
+      "version": 3,
+      "submitted_at": "2026-07-10T18:53:19Z",
+      "latest_version_at": "2026-11-21T13:02:53Z",
+      "categories": [
+        "math.NT",
+        "math.CA"
+      ],
+      "pages": 25,
+      "summary": "Compares inverse central binomial series with different harmonic weights through their partial fraction coefficients. It gives uniform asymptotics, sharp sign conditions, Stieltjes function criteria, and identities at odd weights.",
+      "authors": [
+        "K. Srinivasa Raghava"
+      ],
+      "status": "arXiv preprint",
+      "latest_version_id": "2607.09904v3",
+      "abstract_url": "https://arxiv.org/abs/2607.09904",
+      "version_url": "https://arxiv.org/abs/2607.09904v3",
+      "pdf_url": "https://arxiv.org/pdf/2607.09904",
+      "version_pdf_url": "https://arxiv.org/pdf/2607.09904v3",
+      "doi_url": "https://doi.org/10.48550/arXiv.2607.09904",
+      "doi_registration_status": "arXiv-issued DOI",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "license_name": "arXiv.org non-exclusive license to distribute",
+      "topics": [
+        "Number theory",
+        "Special functions"
+      ]
+    }
+  ]
+}
