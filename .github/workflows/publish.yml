@@ -1,0 +1,68 @@
+name: Publish research collection
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'scripts/**'
+      - '.github/workflows/publish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: research-pages
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - name: Arrange the initial browser upload
+        run: |
+          mkdir -p docs scripts
+          for file in build.py archive_pdfs.py; do
+            if [ -f "$file" ]; then mv "$file" scripts/; fi
+          done
+          for file in papers.json styles.css app.js; do
+            if [ -f "$file" ]; then mv "$file" docs/; fi
+          done
+          touch docs/.nojekyll
+      - name: Generate the initial catalogue if needed
+        run: python3 scripts/build.py
+      - name: Archive the selected public paper versions
+        run: python3 scripts/archive_pdfs.py
+      - name: Generate catalogue with local PDF links
+        run: python3 scripts/build.py
+      - name: Preserve the PDFs in the repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m 'Archive verified arXiv PDF versions'
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+  deploy:
+    needs: archive
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy the research website
+        id: deployment
+        uses: actions/deploy-pages@v4
