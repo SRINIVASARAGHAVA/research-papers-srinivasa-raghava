@@ -10,6 +10,12 @@ PAPERS = DATA["papers"]
 REPO = "https://github.com/SRINIVASARAGHAVA/research-papers-srinivasa-raghava"
 NAME = "K. Srinivasa Raghava"
 BIO = "My research moves between pure and applied mathematics, guided by a recurring question: what deeper structure explains the pattern in front of us? Alongside published papers and preprints, I enjoy writing clear mathematical notes and sharing new findings in ways that invite students and researchers into the conversation."
+FEATURE_URL = "https://ictp.global/news/13119204"
+FEATURE_TITLE = "Srinivasa Raghava: Patterns, Primes, and the Ramanujan Influence"
+FEATURE_DESCRIPTION = "A conversation about Ramanujan's influence, mathematical intuition, experimentation, and the ideas behind my research."
+FEATURE_ATTRIBUTION = "Interview by Abdulhafeez Abdulsalam for InvariantMath, shared on the ICTP Global Science Portal."
+FACEBOOK = "https://www.facebook.com/SRINIVASARAGHAVA6174"
+X_PROFILE = "https://x.com/SrinivasR1729"
 
 def date(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00")).strftime("%d %b %Y").lstrip("0")
@@ -73,12 +79,13 @@ write("docs/index.html", f'''<!doctype html>
 </head>
 <body>
   <a class="skip-link" href="#papers">Skip to research papers</a>
-  <header class="site-header"><a class="wordmark" href="./" aria-label="Research collection home">KSR<span>Mathematics</span></a><nav aria-label="Main navigation"><a href="#papers">Papers</a><a href="#about">About</a><a href="{REPO}">GitHub <span aria-hidden="true">↗</span></a></nav></header>
+  <header class="site-header"><a class="wordmark" href="./" aria-label="Research collection home">KSR<span>Mathematics</span></a><nav aria-label="Main navigation"><a href="#feature">Feature</a><a href="#papers">Papers</a><a href="#about">About</a><a href="{REPO}">GitHub <span aria-hidden="true">↗</span></a></nav></header>
   <main>
     <section class="hero" aria-labelledby="page-title">
-      <div class="hero-copy"><p class="eyebrow">A mathematics research collection</p><h1 id="page-title">{NAME}</h1><p class="hero-subtitle">Research papers</p><p class="intro">{escape(BIO)}</p><div class="hero-links"><a class="button" href="#papers">Browse the collection <span aria-hidden="true">↓</span></a><a href="citations.bib" download>Download all citations</a></div></div>
+      <div class="hero-copy"><p class="eyebrow">A mathematics research collection</p><h1 id="page-title">{NAME}</h1><p class="hero-subtitle">Research papers</p><p class="intro">{escape(BIO)}</p><div class="hero-links"><a class="button" href="#papers">Browse the collection <span aria-hidden="true">↓</span></a><a href="citations.bib" download>Download all citations</a></div><p class="social-links"><span>Connect</span><a href="{FACEBOOK}">Facebook</a><a href="{X_PROFILE}">X (Twitter)</a></p></div>
       <figure class="hero-portrait"><img src="k-srinivasa-raghava.png" alt="Portrait of {NAME}" width="1122" height="1402" fetchpriority="high"><figcaption><span>{NAME}</span><span>{len(PAPERS)} public preprints</span></figcaption></figure>
     </section>
+    <section class="feature" id="feature" aria-labelledby="feature-title"><div class="feature-meta"><p class="eyebrow">Special feature</p><p class="feature-source">ICTP Global Science Portal</p><time datetime="2026-03-24">24 March 2026</time></div><div class="feature-copy"><h2 id="feature-title">{escape(FEATURE_TITLE)}</h2><p class="feature-description">{escape(FEATURE_DESCRIPTION)}</p><p class="feature-attribution">{escape(FEATURE_ATTRIBUTION)}</p><a class="feature-link" href="{FEATURE_URL}">Read the interview <span aria-hidden="true">↗</span></a></div></section>
     <section class="collection" id="papers" aria-labelledby="collection-title">
       <div class="section-heading"><div><p class="eyebrow">The collection</p><h2 id="collection-title">Papers &amp; preprints</h2></div><p>Version-specific PDFs.<br>Original records on arXiv.</p></div>
       <div class="filters" id="filters" hidden><div class="search-group"><label for="search">Search the collection</label><input id="search" type="search" placeholder="Title, topic or arXiv number" autocomplete="off"></div><div class="topic-group"><label for="topic">Research topic</label><select id="topic"><option value="">All topics</option><option value="number-theory">Number theory</option><option value="partitions">Partitions &amp; combinatorics</option><option value="special-functions">Special functions</option><option value="modular-forms">Modular forms &amp; q-series</option><option value="algebraic-geometry">Algebraic geometry</option></select></div><button id="clear-filters" type="button" class="clear-button">Clear filters</button></div>
@@ -111,6 +118,8 @@ write("README.md", f'''# Research papers
 
 {BIO}
 
+[Facebook]({FACEBOOK}) · [X (Twitter)]({X_PROFILE})
+
 A public collection of mathematics preprints covering number theory, partitions, special functions, modular forms, and algebraic geometry.
 
 **{len(PAPERS)} public arXiv preprints** · Metadata checked **{date(DATA['verified_on'])}**
@@ -118,6 +127,18 @@ A public collection of mathematics preprints covering number theory, partitions,
 [Research website](https://srinivasaraghava.github.io/research-papers-srinivasa-raghava/) · [Browse all citations](citations.bib) · [arXiv author search]({DATA['author_search_url']})
 
 PDF links below open the exact versions listed. Each arXiv record provides the full abstract, submission history, and access to later revisions. Papers are described as preprints; no journal publication status is implied.
+
+## Special feature
+
+### [{FEATURE_TITLE}]({FEATURE_URL})
+
+**ICTP Global Science Portal · 24 March 2026**
+
+{FEATURE_DESCRIPTION}
+
+{FEATURE_ATTRIBUTION}
+
+[Read the interview]({FEATURE_URL})
 
 ## Paper index
 
