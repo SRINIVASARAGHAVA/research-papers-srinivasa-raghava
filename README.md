@@ -10,7 +10,7 @@ My research moves between pure and applied mathematics, guided by a recurring qu
 
 A public collection of research papers covering mathematical physics, number theory, partitions, special functions, modular forms, and algebraic geometry.
 
-**10 papers: 9 public arXiv preprints and 1 author manuscript** · arXiv metadata checked **24 Nov 2026**
+**11 papers: 9 public arXiv preprints and 2 author manuscripts** · arXiv metadata checked **24 Nov 2026**
 
 [Research website](https://srinivasaraghava.github.io/research-papers-srinivasa-raghava/) · [Browse all citations](citations.bib) · [arXiv author search](https://arxiv.org/search/?query=Raghava%2C+K+S&searchtype=author)
 
@@ -32,74 +32,81 @@ Interview by Abdulhafeez Abdulsalam for InvariantMath, shared on the ICTP Global
 
 | # | Paper | Record / status | Version / collection date | Read |
 | --- | --- | --- | --- | --- |
-| 1 | [String Amplitude Residues Along Kinematic Curves](papers/string-amplitude-residues/) | Author manuscript | Added: 24 Nov 2026 | [PDF](docs/pdfs/string-amplitude-residues-along-kinematic-curves.pdf) |
-| 2 | [Taylor coefficients and duality for finite multiple T-values](papers/2611.23315/) | [2611.23315v1](https://arxiv.org/abs/2611.23315v1) | Version: 14 Nov 2026 UTC | [PDF](docs/pdfs/2611.23315v1.pdf) |
-| 3 | [Coefficient arithmetic and Mellin moments of the Rogers-Ramanujan continued fraction](papers/2610.10578/) | [2610.10578v4](https://arxiv.org/abs/2610.10578v4) | Version: 13 Nov 2026 UTC | [PDF](docs/pdfs/2610.10578v4.pdf) |
-| 4 | [Dedekind Eta Powers and Interlacing in Lambert Series Quotients](papers/2609.22346/) | [2609.22346v2](https://arxiv.org/abs/2609.22346v2) | Version: 20 Nov 2026 UTC | [PDF](docs/pdfs/2609.22346v2.pdf) |
-| 5 | [Exact Moments and CM Periods of Reciprocal Quadratic Mellin Integrals](papers/2609.20201/) | [2609.20201v2](https://arxiv.org/abs/2609.20201v2) | Version: 14 Oct 2026 UTC | [PDF](docs/pdfs/2609.20201v2.pdf) |
-| 6 | [Radial Limits and Euler Exponents of a False Theta Series with Character Modulo 8](papers/2609.18956/) | [2609.18956v2](https://arxiv.org/abs/2609.18956v2) | Version: 22 Nov 2026 UTC | [PDF](docs/pdfs/2609.18956v2.pdf) |
-| 7 | [Arithmetic Constraints and Limit Laws for Diagonal Rational Partitions](papers/2609.18945/) | [2609.18945v1](https://arxiv.org/abs/2609.18945v1) | Version: 10 Sep 2026 UTC | [PDF](docs/pdfs/2609.18945v1.pdf) |
-| 8 | [Walsh eta-units at squarefree level-integral structure and Fricke values](papers/2607.11926/) | [2607.11926v2](https://arxiv.org/abs/2607.11926v2) | Version: 12 Oct 2026 UTC | [PDF](docs/pdfs/2607.11926v2.pdf) |
-| 9 | [A Ramanujan Pell K3 Surface and Cube Representations](papers/2607.11925/) | [2607.11925v4](https://arxiv.org/abs/2607.11925v4) | Version: 14 Nov 2026 UTC | [PDF](docs/pdfs/2607.11925v4.pdf) |
-| 10 | [Harmonic weights in inverse central binomial series](papers/2607.09904/) | [2607.09904v3](https://arxiv.org/abs/2607.09904v3) | Version: 21 Nov 2026 UTC | [PDF](docs/pdfs/2607.09904v3.pdf) |
+| 1 | [Theta Differences, Class Group Characters, and the Rogers–Ramanujan Functions at Degree 29](papers/theta-differences-degree-29/) | Author manuscript | Added: 25 Nov 2026 | [PDF](docs/pdfs/theta-differences-class-group-characters-and-the-rogers-ramanujan-functions-at-degree-29.pdf) |
+| 2 | [String Amplitude Residues Along Kinematic Curves](papers/string-amplitude-residues/) | Author manuscript | Added: 24 Nov 2026 | [PDF](docs/pdfs/string-amplitude-residues-along-kinematic-curves.pdf) |
+| 3 | [Taylor coefficients and duality for finite multiple T-values](papers/2611.23315/) | [2611.23315v1](https://arxiv.org/abs/2611.23315v1) | Version: 14 Nov 2026 UTC | [PDF](docs/pdfs/2611.23315v1.pdf) |
+| 4 | [Coefficient arithmetic and Mellin moments of the Rogers-Ramanujan continued fraction](papers/2610.10578/) | [2610.10578v4](https://arxiv.org/abs/2610.10578v4) | Version: 13 Nov 2026 UTC | [PDF](docs/pdfs/2610.10578v4.pdf) |
+| 5 | [Dedekind Eta Powers and Interlacing in Lambert Series Quotients](papers/2609.22346/) | [2609.22346v2](https://arxiv.org/abs/2609.22346v2) | Version: 20 Nov 2026 UTC | [PDF](docs/pdfs/2609.22346v2.pdf) |
+| 6 | [Exact Moments and CM Periods of Reciprocal Quadratic Mellin Integrals](papers/2609.20201/) | [2609.20201v2](https://arxiv.org/abs/2609.20201v2) | Version: 14 Oct 2026 UTC | [PDF](docs/pdfs/2609.20201v2.pdf) |
+| 7 | [Radial Limits and Euler Exponents of a False Theta Series with Character Modulo 8](papers/2609.18956/) | [2609.18956v2](https://arxiv.org/abs/2609.18956v2) | Version: 22 Nov 2026 UTC | [PDF](docs/pdfs/2609.18956v2.pdf) |
+| 8 | [Arithmetic Constraints and Limit Laws for Diagonal Rational Partitions](papers/2609.18945/) | [2609.18945v1](https://arxiv.org/abs/2609.18945v1) | Version: 10 Sep 2026 UTC | [PDF](docs/pdfs/2609.18945v1.pdf) |
+| 9 | [Walsh eta-units at squarefree level-integral structure and Fricke values](papers/2607.11926/) | [2607.11926v2](https://arxiv.org/abs/2607.11926v2) | Version: 12 Oct 2026 UTC | [PDF](docs/pdfs/2607.11926v2.pdf) |
+| 10 | [A Ramanujan Pell K3 Surface and Cube Representations](papers/2607.11925/) | [2607.11925v4](https://arxiv.org/abs/2607.11925v4) | Version: 14 Nov 2026 UTC | [PDF](docs/pdfs/2607.11925v4.pdf) |
+| 11 | [Harmonic weights in inverse central binomial series](papers/2607.09904/) | [2607.09904v3](https://arxiv.org/abs/2607.09904v3) | Version: 21 Nov 2026 UTC | [PDF](docs/pdfs/2607.09904v3.pdf) |
 
 ## Paper summaries
 
-### 1. String Amplitude Residues Along Kinematic Curves
+### 1. Theta Differences, Class Group Characters, and the Rogers–Ramanujan Functions at Degree 29
+
+Expresses a family of Rogers–Ramanujan series as differences of binary theta series and identifies the class group characters in their Hecke decompositions. Degree 29 is the only member of the family with exactly two conjugate pairs of characters.
+
+[Read PDF](docs/pdfs/theta-differences-class-group-characters-and-the-rogers-ramanujan-functions-at-degree-29.pdf) · Author manuscript · [Details & citation](papers/theta-differences-degree-29/)
+
+### 2. String Amplitude Residues Along Kinematic Curves
 
 Studies residues of four-point open and closed string amplitudes along varying momentum-transfer curves, including recovery of transfer data and bounds on massive-level remainders. It also develops rational bounds for pi using interpolation and differentiated Gauss sums, with asymptotic remainder estimates.
 
 [Read PDF](docs/pdfs/string-amplitude-residues-along-kinematic-curves.pdf) · Author manuscript · [Details & citation](papers/string-amplitude-residues/)
 
-### 2. Taylor coefficients and duality for finite multiple T-values
+### 3. Taylor coefficients and duality for finite multiple T-values
 
 Uses coefficients of iterated integrals to represent finite multiple T-values. It develops Bernoulli convolution formulas and duality identities, including a specified family from Cheng and Zhao's conjecture.
 
 [Read PDF (2611.23315v1)](docs/pdfs/2611.23315v1.pdf) · [arXiv record & version history](https://arxiv.org/abs/2611.23315) · [Details & citation](papers/2611.23315/)
 
-### 3. Coefficient arithmetic and Mellin moments of the Rogers-Ramanujan continued fraction
+### 4. Coefficient arithmetic and Mellin moments of the Rogers-Ramanujan continued fraction
 
 Investigates signs and arithmetic properties of logarithmic coefficients of the Rogers-Ramanujan continued fraction. It relates these coefficients to Mellin moment generating functions and integrals involving zeta and L-functions.
 
 [Read PDF (2610.10578v4)](docs/pdfs/2610.10578v4.pdf) · [arXiv record & version history](https://arxiv.org/abs/2610.10578) · [Details & citation](papers/2610.10578/)
 
-### 4. Dedekind Eta Powers and Interlacing in Lambert Series Quotients
+### 5. Dedekind Eta Powers and Interlacing in Lambert Series Quotients
 
 Studies zero and pole interlacing in Lambert series quotients formed from Euler's product. It connects the cubic case with total positivity and analyzes interpolation and boundary limits for general integer powers.
 
 [Read PDF (2609.22346v2)](docs/pdfs/2609.22346v2.pdf) · [arXiv record & version history](https://arxiv.org/abs/2609.22346) · [Details & citation](papers/2609.22346/)
 
-### 5. Exact Moments and CM Periods of Reciprocal Quadratic Mellin Integrals
+### 6. Exact Moments and CM Periods of Reciprocal Quadratic Mellin Integrals
 
 Develops exact evaluations and recurrences for moments of reciprocal quadratic Mellin integrals. It also studies algebraic sampling functions and connections with elliptic curves, complex multiplication, and gamma-valued periods.
 
 [Read PDF (2609.20201v2)](docs/pdfs/2609.20201v2.pdf) · [arXiv record & version history](https://arxiv.org/abs/2609.20201) · [Details & citation](papers/2609.20201/)
 
-### 6. Radial Limits and Euler Exponents of a False Theta Series with Character Modulo 8
+### 7. Radial Limits and Euler Exponents of a False Theta Series with Character Modulo 8
 
 Examines a false theta series and its moment quotients through Dawson-integral transformations and radial limits at roots of unity. It also gives partition interpretations, Euler product exponent formulas, and information about zeros.
 
 [Read PDF (2609.18956v2)](docs/pdfs/2609.18956v2.pdf) · [arXiv record & version history](https://arxiv.org/abs/2609.18956) · [Details & citation](papers/2609.18956/)
 
-### 7. Arithmetic Constraints and Limit Laws for Diagonal Rational Partitions
+### 8. Arithmetic Constraints and Limit Laws for Diagonal Rational Partitions
 
 Studies partitions into reduced positive fractions with bounded numerators and denominators. It develops growth asymptotics, arithmetic restrictions on prime-denominator contributions, and distributional results for residues and sampling.
 
 [Read PDF (2609.18945v1)](docs/pdfs/2609.18945v1.pdf) · [arXiv record & version history](https://arxiv.org/abs/2609.18945) · [Details & citation](papers/2609.18945/)
 
-### 8. Walsh eta-units at squarefree level-integral structure and Fricke values
+### 9. Walsh eta-units at squarefree level-integral structure and Fricke values
 
 Studies integral structures associated with modular units at squarefree levels and evaluates normalized units at Fricke points. Applications concern quadratic units, equations for inverse pi, and colored partition identities.
 
 [Read PDF (2607.11926v2)](docs/pdfs/2607.11926v2.pdf) · [arXiv record & version history](https://arxiv.org/abs/2607.11926) · [Details & citation](papers/2607.11926/)
 
-### 9. A Ramanujan Pell K3 Surface and Cube Representations
+### 10. A Ramanujan Pell K3 Surface and Cube Representations
 
 Classifies polynomial representations of a specified Ramanujan-Pell sextic as a sum of two cubes. It relates these representations to sections of an elliptic K3 surface and studies heights and denominator divisibility.
 
 [Read PDF (2607.11925v4)](docs/pdfs/2607.11925v4.pdf) · [arXiv record & version history](https://arxiv.org/abs/2607.11925) · [Details & citation](papers/2607.11925/)
 
-### 10. Harmonic weights in inverse central binomial series
+### 11. Harmonic weights in inverse central binomial series
 
 Compares inverse central binomial series with different harmonic weights through their partial fraction coefficients. It gives uniform asymptotics, sharp sign conditions, Stieltjes function criteria, and identities at odd weights.
 
