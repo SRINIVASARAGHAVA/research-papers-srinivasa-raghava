@@ -1,6 +1,20 @@
 {
   "manuscripts": [
     {
+      "id": "theta-differences-degree-29",
+      "title": "Theta Differences, Class Group Characters, and the Rogers–Ramanujan Functions at Degree 29",
+      "authors": ["K. Srinivasa Raghava"],
+      "status": "Author manuscript",
+      "pages": 21,
+      "added_on": "2026-11-25",
+      "summary": "Expresses a family of Rogers–Ramanujan series as differences of binary theta series and identifies the class group characters in their Hecke decompositions. Degree 29 is the only member of the family with exactly two conjugate pairs of characters.",
+      "topics": ["Number theory", "Modular forms & q-series", "Special functions"],
+      "pdf_filename": "theta-differences-class-group-characters-and-the-rogers-ramanujan-functions-at-degree-29.pdf",
+      "pdf_bytes": 608475,
+      "pdf_sha256": "201bf1ec7da33c209cd005d9ff4ca43a176a2c4357c0c1b9a024518b2d40d301",
+      "citation_key": "raghavaThetaDifferencesDegree29"
+    },
+    {
       "id": "string-amplitude-residues",
       "title": "String Amplitude Residues Along Kinematic Curves",
       "authors": ["K. Srinivasa Raghava"],
