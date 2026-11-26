@@ -16,6 +16,14 @@ A public collection of research papers covering mathematical physics, number the
 
 Author manuscripts are shared directly by the author and labeled with their collection-added dates. ArXiv PDF links open the exact versions listed; each arXiv record provides the full abstract, submission history, and access to later revisions. These labels do not imply journal publication or peer review.
 
+## Featured research
+
+### [Rational Partitions Package](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package)
+
+Diagonal Rational Partitions counts the ways to write a positive integer n as an unordered sum of reduced fractions a/b with 1 ≤ a ≤ n and 2 ≤ b ≤ n. The table gives the number of eligible fractions K(n) and the partition count R(n) for every n from 1 to 101.
+
+[Read the paper (PDF)](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/diagonal_rational_partitions.pdf) · [Exact values (TXT)](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/R_values.txt) · [Typeset table (PDF)](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/R_values_table.pdf) · [Python code](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/rational_partitions.py) · [Mathematica code](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/RationalPartitions.wl)
+
 ## Special feature
 
 ### [Srinivasa Raghava: Patterns, Primes, and the Ramanujan Influence](https://ictp.global/news/13119204)
