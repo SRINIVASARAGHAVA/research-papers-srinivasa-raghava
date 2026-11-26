@@ -14,6 +14,7 @@ COLLECTION_DESCRIPTION = f"{len(PAPERS)} public arXiv preprints" + (f" and {len(
 REPO = "https://github.com/SRINIVASARAGHAVA/research-papers-srinivasa-raghava"
 PACKAGE_REPO = "https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package"
 PACKAGE_TITLE = "Rational Partitions Package"
+CALCULATOR_PAGE = "rational-partitions.html"
 PACKAGE_DESCRIPTION = ("Diagonal Rational Partitions counts the ways to write a positive integer n as an unordered sum "
                        "of reduced fractions a/b with 1 ≤ a ≤ n and 2 ≤ b ≤ n. The table gives the number of eligible "
                        "fractions K(n) and the partition count R(n) for every n from 1 to 101.")
@@ -126,6 +127,7 @@ write("docs/index.html", f'''<!doctype html>
       <div class="feature-meta"><p class="eyebrow">Featured research</p><a class="feature-link" href="{PACKAGE_REPO}">Full package on GitHub</a></div>
       <div class="feature-copy"><h2 id="package-title">{PACKAGE_TITLE}</h2>
         <p class="feature-description">{escape(PACKAGE_DESCRIPTION)}</p>
+        <a class="feature-link" href="{CALCULATOR_PAGE}"><strong>Open the Rational Partitions calculator</strong></a>
         <div class="social-links">
           {package_html}
         </div>
@@ -189,6 +191,8 @@ Author manuscripts are shared directly by the author and labeled with their coll
 ### [{PACKAGE_TITLE}]({PACKAGE_REPO})
 
 {PACKAGE_DESCRIPTION}
+
+[Open the interactive calculator and worked examples](https://srinivasaraghava.github.io/research-papers-srinivasa-raghava/{CALCULATOR_PAGE})
 
 {package_markdown}
 
