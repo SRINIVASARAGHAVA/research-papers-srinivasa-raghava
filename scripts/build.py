@@ -12,6 +12,18 @@ MANUSCRIPTS = json.loads(MANUSCRIPT_PATH.read_text(encoding="utf-8"))["manuscrip
 COLLECTION = MANUSCRIPTS + PAPERS
 COLLECTION_DESCRIPTION = f"{len(PAPERS)} public arXiv preprints" + (f" and {len(MANUSCRIPTS)} author manuscript{'s' if len(MANUSCRIPTS) != 1 else ''}" if MANUSCRIPTS else "")
 REPO = "https://github.com/SRINIVASARAGHAVA/research-papers-srinivasa-raghava"
+PACKAGE_REPO = "https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package"
+PACKAGE_TITLE = "Rational Partitions Package"
+PACKAGE_DESCRIPTION = ("Diagonal Rational Partitions counts the ways to write a positive integer n as an unordered sum "
+                       "of reduced fractions a/b with 1 ≤ a ≤ n and 2 ≤ b ≤ n. The table gives the number of eligible "
+                       "fractions K(n) and the partition count R(n) for every n from 1 to 101.")
+PACKAGE_FILES = [
+    ("Read the paper (PDF)", "diagonal_rational_partitions.pdf"),
+    ("Exact values (TXT)", "R_values.txt"),
+    ("Typeset table (PDF)", "R_values_table.pdf"),
+    ("Python code", "rational_partitions.py"),
+    ("Mathematica code", "RationalPartitions.wl"),
+]
 NAME = "K. Srinivasa Raghava"
 BIO = "My research moves between pure and applied mathematics, guided by a recurring question: what deeper structure explains the pattern in front of us? Alongside published papers and preprints, I enjoy writing clear mathematical notes and sharing new findings in ways that invite students and researchers into the conversation."
 FEATURE_URL = "https://ictp.global/news/13119204"
@@ -64,6 +76,8 @@ for n, p in enumerate(COLLECTION, 1):
     record_label = f"arXiv:{p['latest_version_id']}" if is_arxiv else "Author manuscript"
     date_label = f"Version date: {date(p['latest_version_at'])} UTC" if is_arxiv else f"Added to collection: {date(p['added_on'])}"
     record_link = f'<a href="{p["abstract_url"]}">arXiv &amp; versions<span class="sr-only">: {title}</span></a>' if is_arxiv else ""
+    if ident == "2609.18945":
+        record_link += f' <a href="#rational-partitions-package">{PACKAGE_TITLE}</a>'
     topics = " ".join(p["topics"])
     tags = "".join(f'<span class="tag">{escape(t)}</span>' for t in p["topics"])
     details = f"{REPO}/tree/main/papers/{ident}"
@@ -84,6 +98,10 @@ for n, p in enumerate(COLLECTION, 1):
       </div>
     </article>''')
 
+package_links = [(label, f"{PACKAGE_REPO}/blob/main/{filename}") for label, filename in PACKAGE_FILES]
+package_html = "\n          ".join(f'<a class="feature-link" href="{url}">{escape(label)}</a>' for label, url in package_links)
+package_markdown = " · ".join(f"[{label}]({url})" for label, url in package_links)
+
 write("docs/index.html", f'''<!doctype html>
 <html lang="en">
 <head>
@@ -98,13 +116,21 @@ write("docs/index.html", f'''<!doctype html>
 </head>
 <body>
   <a class="skip-link" href="#papers">Skip to research papers</a>
-  <header class="site-header"><a class="wordmark" href="./" aria-label="Research collection home">KSR<span>Mathematics</span></a><nav aria-label="Main navigation"><a href="#feature">Feature</a><a href="#papers">Papers</a><a href="#about">About</a><a href="{REPO}">GitHub <span aria-hidden="true">↗</span></a></nav></header>
+  <header class="site-header"><a class="wordmark" href="./" aria-label="Research collection home">KSR<span>Mathematics</span></a><nav aria-label="Main navigation"><a href="#rational-partitions-package">Package</a><a href="#papers">Papers</a><a href="#feature">Interview</a><a href="#about">About</a><a href="{REPO}">GitHub <span aria-hidden="true">↗</span></a></nav></header>
   <main>
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-copy"><p class="eyebrow">A mathematics research collection</p><h1 id="page-title">{NAME}</h1><p class="hero-subtitle">Research papers</p><p class="intro">{escape(BIO)}</p><div class="hero-links"><a class="button" href="#papers">Browse the collection <span aria-hidden="true">↓</span></a><a href="citations.bib" download>Download all citations</a></div><p class="social-links"><span>Connect</span><a href="{FACEBOOK}">Facebook</a><a href="{X_PROFILE}">X (Twitter)</a></p></div>
       <figure class="hero-portrait"><img src="k-srinivasa-raghava.png" alt="Portrait of {NAME}" width="1122" height="1402" fetchpriority="high"><figcaption><span>{NAME}</span><span>{len(COLLECTION)} research papers</span></figcaption></figure>
     </section>
-    <section class="feature" id="feature" aria-labelledby="feature-title"><div class="feature-meta"><p class="eyebrow">Special feature</p><p class="feature-source">ICTP Global Science Portal</p><time datetime="2026-03-24">24 March 2026</time></div><div class="feature-copy"><h2 id="feature-title">{escape(FEATURE_TITLE)}</h2><p class="feature-description">{escape(FEATURE_DESCRIPTION)}</p><p class="feature-attribution">{escape(FEATURE_ATTRIBUTION)}</p><a class="feature-link" href="{FEATURE_URL}">Read the interview <span aria-hidden="true">↗</span></a></div></section>
+    <section class="feature" id="rational-partitions-package" aria-labelledby="package-title">
+      <div class="feature-meta"><p class="eyebrow">Featured research</p><a class="feature-link" href="{PACKAGE_REPO}">Full package on GitHub</a></div>
+      <div class="feature-copy"><h2 id="package-title">{PACKAGE_TITLE}</h2>
+        <p class="feature-description">{escape(PACKAGE_DESCRIPTION)}</p>
+        <div class="social-links">
+          {package_html}
+        </div>
+      </div>
+    </section>
     <section class="collection" id="papers" aria-labelledby="collection-title">
       <div class="section-heading"><div><p class="eyebrow">The collection</p><h2 id="collection-title">Papers &amp; preprints</h2></div><p>{COLLECTION_DESCRIPTION}.</p></div>
       <div class="filters" id="filters" hidden><div class="search-group"><label for="search">Search the collection</label><input id="search" type="search" placeholder="Title, topic or arXiv number" autocomplete="off"></div><div class="topic-group"><label for="topic">Research topic</label><select id="topic"><option value="">All topics</option><option value="mathematical-physics">Mathematical physics</option><option value="number-theory">Number theory</option><option value="partitions">Partitions &amp; combinatorics</option><option value="special-functions">Special functions</option><option value="modular-forms">Modular forms &amp; q-series</option><option value="algebraic-geometry">Algebraic geometry</option></select></div><button id="clear-filters" type="button" class="clear-button">Clear filters</button></div>
@@ -113,6 +139,7 @@ write("docs/index.html", f'''<!doctype html>
       <p class="empty-state" id="empty-state" hidden>No papers match your search. Try another title, topic or arXiv number.</p>
       <p id="citation-status" class="sr-only" role="status" aria-live="polite"></p>
     </section>
+    <section class="feature" id="feature" aria-labelledby="feature-title"><div class="feature-meta"><p class="eyebrow">Special feature</p><p class="feature-source">ICTP Global Science Portal</p><time datetime="2026-03-24">24 March 2026</time></div><div class="feature-copy"><h2 id="feature-title">{escape(FEATURE_TITLE)}</h2><p class="feature-description">{escape(FEATURE_DESCRIPTION)}</p><p class="feature-attribution">{escape(FEATURE_ATTRIBUTION)}</p><a class="feature-link" href="{FEATURE_URL}">Read the interview <span aria-hidden="true">↗</span></a></div></section>
     <section class="about" id="about" aria-labelledby="about-title"><div><p class="eyebrow">About this collection</p><h2 id="about-title">An open reading shelf.</h2></div><div><p>This collection brings together {COLLECTION_DESCRIPTION} by {NAME}, with short summaries, source information and citations.</p><p>Author manuscripts are shared directly by the author and labeled with the date added to the collection. For arXiv preprints, each PDF link opens the listed version; the linked arXiv record provides its abstract, submission history and later revisions. These labels do not imply journal publication or peer review.</p><p class="rights">Paper copyrights and licenses remain those stated in the individual papers and, where applicable, their arXiv records. The repository software license does not relicense the manuscripts.</p><a href="{REPO}">View the collection on GitHub <span aria-hidden="true">↗</span></a></div></section>
   </main>
   <footer><span>{NAME}</span><span>Research papers · arXiv metadata checked {date(DATA['verified_on'])}</span></footer>
@@ -156,6 +183,14 @@ A public collection of research papers covering mathematical physics, number the
 [Research website](https://srinivasaraghava.github.io/research-papers-srinivasa-raghava/) · [Browse all citations](citations.bib) · [arXiv author search]({DATA['author_search_url']})
 
 Author manuscripts are shared directly by the author and labeled with their collection-added dates. ArXiv PDF links open the exact versions listed; each arXiv record provides the full abstract, submission history, and access to later revisions. These labels do not imply journal publication or peer review.
+
+## Featured research
+
+### [{PACKAGE_TITLE}]({PACKAGE_REPO})
+
+{PACKAGE_DESCRIPTION}
+
+{package_markdown}
 
 ## Special feature
 
