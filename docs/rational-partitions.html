@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#17333a">
-  <meta name="description" content="Explore exact diagonal rational partition counts for integers from 1 to 101, with worked examples for 3 and 4.">
+  <meta name="description" content="Find exact rational partition counts through 101 and browse every partition of 3 and 4 alongside the worked examples.">
   <title>Rational Partitions Calculator | K. Srinivasa Raghava</title>
   <link rel="stylesheet" href="styles.css">
   <style>
@@ -30,6 +30,22 @@
     .calc-actions button { background: none; border: 0; color: var(--accent); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; padding: 4px 0; }
     .calc-error { margin: 0; font-size: 15px; }
     .calc-source { margin: 14px 0 0; }
+    .partition-explorer { margin-top: clamp(45px, 7vw, 72px); scroll-margin-top: 20px; }
+    .partition-explorer p { max-width: 72ch; color: var(--body); }
+    .list-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 28px; padding: 12px 18px; background: var(--wash); border-top: 2px solid var(--accent); }
+    .list-controls label { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; }
+    .list-controls select, .list-pages button { min-height: 40px; padding: 7px 10px; border: 1px solid #758f86; background: var(--white); color: var(--ink); }
+    .list-controls select { max-width: 100%; }
+    .list-controls input { width: 18px; height: 18px; margin: 0; accent-color: var(--accent); }
+    .list-navigation { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px 14px; padding: 8px 0; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .list-navigation p { margin: 0; font-size: 14px; font-variant-numeric: tabular-nums; }
+    .list-pages { display: flex; flex-wrap: wrap; gap: 8px; }
+    .list-pages button { cursor: pointer; font-size: 14px; }
+    .list-pages button:hover:enabled { background: var(--wash); }
+    .list-pages button:disabled { color: var(--muted); border-color: var(--line); cursor: default; }
+    .partition-list { margin: 0; padding-inline-start: 3.2em; }
+    .partition-list li { padding: 8px 0 8px 8px; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; font: 19px/1.6 Georgia, serif; font-variant-numeric: lining-nums tabular-nums; }
+    .partition-list li::marker { color: var(--accent); font: 13px Arial, sans-serif; font-variant-numeric: tabular-nums; }
     .calc-examples { margin-top: clamp(45px, 7vw, 72px); }
     .calc-examples h2 { margin-bottom: 18px; }
     .calc-examples details { border-top: 1px solid #a4b4aa; }
@@ -45,6 +61,7 @@
     .calc-steps tr > :first-child { text-align: left; }
     .calc-equation { display: block; margin: 7px 0; font: clamp(18px, 2.5vw, 23px)/1.5 Georgia, serif; color: var(--accent); }
     .calc-examples details > p { margin: 0 0 22px; font-size: 14px; }
+    .example-links { display: flex; flex-wrap: wrap; gap: 4px 22px; }
     @media (max-width: 620px) {
       .calc-panel { grid-template-columns: minmax(0, 1fr); }
       .calc-steps table { font-size: 13px; }
@@ -69,6 +86,7 @@
         <label for="order">Integer <i>n</i></label>
         <input id="order" type="text" value="3" inputmode="numeric" autocomplete="off" spellcheck="false" aria-describedby="order-range" disabled>
         <p class="calc-hint" id="order-range">Enter a whole number from 1 to 101.</p>
+        <p class="calc-hint">Full partition lists are available for <i>n</i> from 1 to 4.</p>
         <noscript><p>Enable JavaScript to change the input, or use the exact values table below.</p></noscript>
       </div>
       <div class="calc-results">
@@ -81,6 +99,7 @@
           </dl>
           <p class="calc-method" id="method"></p>
           <div class="calc-actions">
+            <a id="browse-list" href="#partitions" hidden>Browse the partitions</a>
             <a id="walkthrough" href="#example-3">See the count for R(3)</a>
             <button id="copy-count" type="button" hidden>Copy R(3)</button>
             <span id="copy-status" role="status"></span>
@@ -91,6 +110,25 @@
       </div>
     </section>
     <p class="calc-source">Browse the <a href="https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/R_values.txt">published table of exact values</a> or read the <a href="https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/rational-partition-algorithm.pdf">algorithm and proof (PDF)</a>.</p>
+    <section class="partition-explorer" id="partitions" aria-labelledby="list-title" tabindex="-1" hidden>
+      <h2 id="list-title">Rational partitions</h2>
+      <p id="list-empty" hidden>There are no eligible fractions for 1, so its partition list is empty.</p>
+      <div id="list-content">
+        <p>The unordered sums are listed from fewest to most parts. In the grouped view, 2 × (1/2) means 1/2 + 1/2.</p>
+        <div class="list-controls">
+          <label>Number of parts <select id="part-length" aria-controls="partition-list"><option value="">All lengths</option></select></label>
+          <label><input type="checkbox" id="expand-sums" aria-controls="partition-list">Expand repeated fractions</label>
+        </div>
+        <div class="list-navigation">
+          <p id="list-range" role="status" aria-atomic="true"></p>
+          <div id="list-pages" class="list-pages" role="group" aria-label="Partition list pages" hidden>
+            <button type="button" id="list-prev" aria-controls="partition-list">Previous</button>
+            <button type="button" id="list-next" aria-controls="partition-list">Next</button>
+          </div>
+        </div>
+        <ol id="partition-list" class="partition-list" aria-labelledby="list-title"></ol>
+      </div>
+    </section>
     <section class="calc-examples" aria-labelledby="examples-title">
       <h2 id="examples-title">Worked examples</h2>
       <details id="example-3">
@@ -108,7 +146,7 @@
             <span class="calc-equation">R(3) = 1 × 3 + 2 × 2 + 4 × 1 + 5 × 1 = <strong>16</strong>.</span>
           </li>
         </ol>
-        <p><a class="use-example" href="#order" data-order="3" hidden>Show n = 3 in the calculator</a></p>
+        <p class="example-links"><a class="use-example" href="#order" data-order="3" hidden>Show n = 3 in the calculator</a><a href="?n=3#partitions">Browse all 16 partitions of 3</a></p>
       </details>
       <details id="example-4">
         <summary>Counting R(4) = 226</summary>
@@ -126,7 +164,7 @@
             <span class="calc-equation">R(4) = 1 × 48 + 2 × 27 + 6 × 12 + 9 × 4 + 16 × 1 = <strong>226</strong>.</span>
           </li>
         </ol>
-        <p><a class="use-example" href="#order" data-order="4" hidden>Show n = 4 in the calculator</a></p>
+        <p class="example-links"><a class="use-example" href="#order" data-order="4" hidden>Show n = 4 in the calculator</a><a href="?n=4#partitions">Browse all 226 partitions of 4</a></p>
       </details>
     </section>
   </main>
@@ -246,32 +284,133 @@
       const copy = document.getElementById('copy-count');
       const copyStatus = document.getElementById('copy-status');
       const directLimit = 8;
+      const listLimit = 4;
+      const pageSize = 16;
+      const explorer = document.getElementById('partitions');
+      const list = document.getElementById('partition-list');
+      const lengthFilter = document.getElementById('part-length');
+      const expandSums = document.getElementById('expand-sums');
+      const previous = document.getElementById('list-prev');
+      const next = document.getElementById('list-next');
+      const browse = document.getElementById('browse-list');
+      let partitionsByLength = [];
+      let page = 0;
 
       function gcd(a, b) {
         while (b !== 0) [a, b] = [b, a % b];
         return a;
       }
 
-      function countDirectly(n) {
+      function scaledProblem(n) {
         let denominator = 1;
         for (let b = 2; b <= n; b++) {
           denominator = denominator / gcd(denominator, b) * b;
         }
-        const target = n * denominator;
-        const counts = Array(target + 1).fill(0n);
-        counts[0] = 1n;
-        let keys = 0;
+        const keys = [];
         for (let b = 2; b <= n; b++) {
           for (let a = 1; a <= n; a++) {
-            if (gcd(a, b) !== 1) continue;
-            keys++;
-            const weight = a * (denominator / b);
-            for (let total = weight; total <= target; total++) {
-              counts[total] += counts[total - weight];
+            if (gcd(a, b) === 1) {
+              keys.push({ fraction: a + '/' + b, weight: a * (denominator / b) });
             }
           }
         }
-        return [String(keys), counts[target].toString()];
+        return { keys, target: n * denominator };
+      }
+
+      function countDirectly({keys, target}) {
+        const counts = Array(target + 1).fill(0n);
+        counts[0] = 1n;
+        for (const {weight} of keys) {
+          for (let total = weight; total <= target; total++) {
+            counts[total] += counts[total - weight];
+          }
+        }
+        return [String(keys.length), counts[target].toString()];
+      }
+
+      function enumeratePartitions({keys, target}) {
+        const ordered = [...keys].sort((a, b) => b.weight - a.weight);
+        const path = [];
+        const found = [];
+        function visit(first, remaining) {
+          if (remaining === 0) {
+            found.push(path.slice());
+            return;
+          }
+          for (let i = first; i < ordered.length; i++) {
+            const key = ordered[i];
+            if (key.weight > remaining) continue;
+            path.push(key.fraction);
+            // Reusing i allows repeats. Earlier keys cannot reappear in this branch.
+            visit(i, remaining - key.weight);
+            path.pop();
+          }
+        }
+        visit(0, target);
+        return found.sort((a, b) => a.length - b.length);
+      }
+
+      function formatPartition(parts) {
+        if (expandSums.checked) return parts.join(' + ');
+        const terms = [];
+        for (let start = 0; start < parts.length;) {
+          let end = start + 1;
+          while (end < parts.length && parts[end] === parts[start]) end++;
+          const copies = end - start;
+          terms.push(copies === 1 ? parts[start] : copies + ' × (' + parts[start] + ')');
+          start = end;
+        }
+        return terms.join(' + ');
+      }
+
+      function showPage() {
+        const length = Number(lengthFilter.value);
+        const rows = length ? partitionsByLength.filter(parts => parts.length === length) : partitionsByLength;
+        const begin = page * pageSize;
+        const end = Math.min(begin + pageSize, rows.length);
+        list.start = begin + 1;
+        list.replaceChildren(...rows.slice(begin, end).map(parts => {
+          const item = document.createElement('li');
+          item.textContent = formatPartition(parts);
+          return item;
+        }));
+        const range = document.getElementById('list-range');
+        range.textContent = rows.length === 1 ? 'Showing 1 of 1 partition' :
+          'Showing ' + (begin + 1) + '–' + end + ' of ' + rows.length + ' partitions';
+        const active = document.activeElement;
+        previous.disabled = begin === 0;
+        next.disabled = end === rows.length;
+        document.getElementById('list-pages').hidden = rows.length <= pageSize;
+        if (active === next && next.disabled && !previous.disabled) previous.focus();
+        if (active === previous && previous.disabled && !next.disabled) next.focus();
+      }
+
+      function changePage(delta) {
+        const scrolledPastStart = list.getBoundingClientRect().top < 0;
+        page += delta;
+        showPage();
+        if (scrolledPastStart) lengthFilter.closest('.list-controls').scrollIntoView();
+      }
+
+      function updateExplorer(n, problem) {
+        partitionsByLength = [];
+        page = 0;
+        list.replaceChildren();
+        explorer.hidden = !problem || n > listLimit;
+        browse.hidden = explorer.hidden || n === 1;
+        if (explorer.hidden) return;
+        partitionsByLength = enumeratePartitions(problem);
+        document.getElementById('list-title').textContent = 'Partitions of ' + n;
+        document.getElementById('list-empty').hidden = partitionsByLength.length > 0;
+        document.getElementById('list-content').hidden = partitionsByLength.length === 0;
+        if (!partitionsByLength.length) return;
+        browse.href = '?n=' + n + '#partitions';
+        browse.textContent = partitionsByLength.length === 1 ? 'View the partition of ' + n :
+          'Browse all ' + partitionsByLength.length + ' partitions of ' + n;
+        const lengths = new Set(partitionsByLength.map(parts => parts.length));
+        lengthFilter.replaceChildren(new Option('All lengths', ''));
+        for (const length of lengths) lengthFilter.add(new Option(length + ' parts', String(length)));
+        showPage();
       }
 
       function update() {
@@ -279,6 +418,7 @@
         const n = Number(text);
         copyStatus.textContent = '';
         if (!/^\d+$/.test(text) || !Number.isSafeInteger(n) || n < 1 || n > published.length) {
+          updateExplorer(null, null);
           result.hidden = true;
           error.hidden = false;
           error.textContent = 'Enter a whole number from 1 to 101 to see its counts.';
@@ -290,7 +430,9 @@
         input.removeAttribute('aria-invalid');
         input.setAttribute('aria-describedby', 'order-range');
         error.hidden = true;
-        const [keys, partitions] = n <= directLimit ? countDirectly(n) : published[n - 1];
+        const problem = n <= directLimit ? scaledProblem(n) : null;
+        const [keys, partitions] = problem ? countDirectly(problem) : published[n - 1];
+        updateExplorer(n, problem);
         document.getElementById('key-label').textContent = 'K(' + n + ')';
         document.getElementById('partition-label').textContent = 'R(' + n + ')';
         document.getElementById('key-count').textContent = keys;
@@ -314,7 +456,13 @@
       }
 
       input.disabled = false;
+      const initialOrder = new URLSearchParams(location.search).get('n');
+      if (initialOrder !== null) input.value = initialOrder;
       input.addEventListener('input', update);
+      lengthFilter.addEventListener('change', () => { page = 0; showPage(); });
+      expandSums.addEventListener('change', showPage);
+      previous.addEventListener('click', () => changePage(-1));
+      next.addEventListener('click', () => changePage(1));
       copy.addEventListener('click', async () => {
         const count = partitionCount.textContent;
         try {
