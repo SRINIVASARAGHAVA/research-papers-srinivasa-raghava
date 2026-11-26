@@ -22,6 +22,8 @@ Author manuscripts are shared directly by the author and labeled with their coll
 
 Diagonal Rational Partitions counts the ways to write a positive integer n as an unordered sum of reduced fractions a/b with 1 ≤ a ≤ n and 2 ≤ b ≤ n. The table gives the number of eligible fractions K(n) and the partition count R(n) for every n from 1 to 101.
 
+[Open the interactive calculator and worked examples](https://srinivasaraghava.github.io/research-papers-srinivasa-raghava/rational-partitions.html)
+
 [Read the paper (PDF)](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/diagonal_rational_partitions.pdf) · [Exact values (TXT)](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/R_values.txt) · [Typeset table (PDF)](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/R_values_table.pdf) · [Python code](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/rational_partitions.py) · [Mathematica code](https://github.com/SRINIVASARAGHAVA/Rational-Partitions-Package/blob/main/RationalPartitions.wl)
 
 ## Special feature
